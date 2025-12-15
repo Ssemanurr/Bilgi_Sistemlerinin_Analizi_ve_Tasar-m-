@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Randevu Al | PawLab</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<header class="header">
+    <div class="logo">🐾 PawLab Veteriner Kliniği</div>
+
+    <nav class="menu">
+        <a href="/">Anasayfa</a>
+        <a href="/appointment">Randevu Al</a>
+        <a href="/login">Giriş Yap</a>
+        <a href="/admin">Yönetim</a>
+    </nav>
+</header>
+
+<main class="appointment-main">
+
+    <div class="appointment-box">
+        <h2>Randevu Al</h2>
+
+        <!-- ✅ BAŞARI MESAJI -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+          {% if messages %}
+            {% for category, message in messages %}
+              <div class="alert success">
+                {{ message }}
+              </div>
+            {% endfor %}
+          {% endif %}
+        {% endwith %}
+
+        <form method="POST">
+
+            <label>Hayvan Sahibinin Adı</label>
+            <input type="text" name="owner" placeholder="Ad Soyad" required>
+
+            <label>Hayvanın Adı</label>
+            <input type="text" name="pet_name" placeholder="Örn: Pamuk" required>
+
+            <label>Hayvan Türü / Cinsi</label>
+            <input type="text" name="pet_type" placeholder="Örn: Kedi" required>
+
+            <label>Randevu Tarihi</label>
+            <input type="date" name="date" required>
+
+            <label>Randevu Saati</label>
+            <input type="time" name="time" required>
+
+            <label>Şikayet / Not</label>
+            <textarea name="note" placeholder="Kısaca açıklayınız..."></textarea>
+
+            <button type="submit">Randevu Oluştur</button>
+
+        </form>
+    </div>
+
+</main>
+
+</body>
+</html>
+
