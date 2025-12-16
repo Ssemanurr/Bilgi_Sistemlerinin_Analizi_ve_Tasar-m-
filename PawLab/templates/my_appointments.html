@@ -1,10 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Randevularım | PawLab</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
 
+<h2 class="page-title">Randevularım</h2>
+
+<div class="appointments-grid">
+
+{% for a in appointments %}
+    <div class="appointment-card">
+        <p><strong>Hayvan:</strong> {{ a.pet_name }} ({{ a.pet_type }})</p>
+        <p><strong>Tarih:</strong> {{ a.date }} - {{ a.time }}</p>
+        <p><strong>Not:</strong> {{ a.note }}</p>
+
+        <a class="cancel-btn" href="/cancel-appointment/{{ loop.index0 }}">
+            Randevuyu İptal Et
+        </a>
+    </div>
+{% else %}
+    <p class="empty-text">Henüz randevunuz yok.</p>
+{% endfor %}
+
+</div>
+
 </body>
 </html>
+

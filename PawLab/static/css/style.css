@@ -377,3 +377,122 @@ body {
     text-decoration: none;
     color: #2f2f2f;
 }
+.view-appointments {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.view-appointments a {
+    display: inline-block;
+    padding: 12px 26px;
+    background: #e7d6c4;
+    border-radius: 25px;
+    text-decoration: none;
+    color: #2f2f2f;
+    font-weight: bold;
+}
+
+.view-appointments a:hover {
+    background: #d6c3ae;
+}
+.appointment-main {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.appointment-box {
+    background: #e6d6c3;
+    padding: 30px;
+    border-radius: 30px;
+    width: 420px;
+}
+
+.appointment-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.appointment-box label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+.appointment-box input,
+.appointment-box textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    margin-top: 6px;
+}
+
+.appointment-box button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    border-radius: 25px;
+    background: #d6c3ae;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.my-appointments-btn {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #2f2f2f;
+}
+.secondary-btn {
+    display: inline-block;
+    padding: 12px 26px;
+    background: #d8c8b5;
+    color: #2f2f2f;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.secondary-btn:hover {
+    background: #cbb7a1;
+}
+.page-title {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.appointments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+    padding: 0 60px 60px;
+}
+
+.appointment-card {
+    background: #e6d7c5;
+    padding: 25px;
+    border-radius: 22px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+.cancel-btn {
+    display: inline-block;
+    margin-top: 12px;
+    color: #8b2d2d;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.cancel-btn:hover {
+    text-decoration: underline;
+}
+
+.empty-text {
+    text-align: center;
+    font-size: 18px;
+    color: #555;
+}
