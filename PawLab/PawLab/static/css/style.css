@@ -1,0 +1,498 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Georgia", serif;
+}
+
+html, body {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+/* BODY */
+body {
+    background-color: #f4ebdf;
+    color: #2f2f2f;
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 45px;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.menu a {
+    margin: 0 6px;
+    padding: 9px 16px;
+    background: #e7d6c4;
+    border-radius: 25px;
+    text-decoration: none;
+    color: #2f2f2f;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    background: #d6c3ae;
+}
+
+.announcement {
+    background: #e7d6c4;
+    padding: 14px 16px;
+    border-radius: 18px;
+    width: 250px;
+    font-size: 14px;
+}
+
+/* MAIN */
+.main {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 35px;
+    padding: 20px 55px;
+    align-items: center;
+}
+
+/* LEFT TEXT */
+.about-box {
+    background: #cfc8bb;
+    padding: 26px;
+    border-radius: 26px;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* IMAGES */
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 150px);
+    gap: 20px 28px;
+    justify-content: center;
+}
+
+.image-gallery img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 22px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+/* image offsets */
+.image-gallery img:nth-child(1) {
+    transform: translateX(-18px);
+}
+
+.image-gallery img:nth-child(2) {
+    transform: translateX(18px);
+}
+
+.image-gallery img:nth-child(3) {
+    grid-column: span 2;
+    justify-self: center;
+    transform: translateY(6px);
+}
+
+/* QUOTE */
+.quote {
+    font-size: 26px;
+    font-style: italic;
+    text-align: center;
+    color: #3a2f2a;
+}
+
+/* FOOTER */
+.footer {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 55px;
+}
+
+.footer h4 {
+    margin-bottom: 8px;
+}
+
+.footer-left,
+.footer-right {
+    font-size: 14px;
+}
+/* APPOINTMENT PAGE */
+.appointment-main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.appointment-box {
+    background: #cfc8bb;
+    padding: 30px 40px;
+    border-radius: 30px;
+    width: 420px;
+}
+
+.appointment-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.appointment-box label {
+    display: block;
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+.appointment-box input,
+.appointment-box textarea {
+    width: 100%;
+    margin-top: 6px;
+    padding: 10px;
+    border-radius: 18px;
+    border: none;
+    font-family: inherit;
+}
+
+.appointment-box textarea {
+    resize: none;
+    height: 80px;
+}
+
+.appointment-box button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    border-radius: 25px;
+    border: none;
+    background: #e7d6c4;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.appointment-box button:hover {
+    background: #d6c3ae;
+}
+.success-container {
+    max-width: 500px;
+    margin: 60px auto;
+    background: #e7d6c4;
+    padding: 40px;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.success-container h2 {
+    margin-bottom: 20px;
+    font-size: 26px;
+}
+
+.success-container p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.success-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn {
+    padding: 12px 24px;
+    background: #d6c3ae;
+    border-radius: 25px;
+    text-decoration: none;
+    color: #2f2f2f;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #c5b19a;
+}
+
+.btn.secondary {
+    background: #bfae9a;
+}
+.alert.success {
+    background: #d8e6d1;
+    color: #2f2f2f;
+    padding: 15px 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+.login-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.login-box {
+    width: 420px;
+    background: #e7d6c4;
+    padding: 40px;
+    border-radius: 30px;
+}
+
+.login-box h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.login-box label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 10px 14px;
+    border-radius: 18px;
+    border: none;
+    margin-bottom: 18px;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 25px;
+    border: none;
+    background: #d6c3ae;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login-box button:hover {
+    background: #c5b19a;
+}
+
+.login-note {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.login-note a {
+    font-weight: bold;
+    color: #2f2f2f;
+    text-decoration: none;
+}
+.alert.success {
+    background: #d8e6d1;
+    padding: 12px;
+    border-radius: 18px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.alert.error {
+    background: #f2caca;
+    padding: 12px;
+    border-radius: 18px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+/* =========================
+   LOGIN & REGISTER
+========================= */
+
+.auth-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.auth-box {
+    background: #e7d6c4;
+    width: 420px;
+    padding: 35px;
+    border-radius: 28px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    margin: 0 auto;
+}
+
+.auth-box h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 26px;
+}
+
+.auth-box label {
+    display: block;
+    margin-top: 14px;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.auth-box input {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+}
+
+.auth-box button {
+    width: 100%;
+    margin-top: 25px;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    background: #d6c3ae;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.auth-box button:hover {
+    background: #c4b09a;
+}
+
+.auth-box .switch {
+    text-align: center;
+    margin-top: 18px;
+    font-size: 14px;
+}
+
+.auth-box .switch a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #2f2f2f;
+}
+.view-appointments {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.view-appointments a {
+    display: inline-block;
+    padding: 12px 26px;
+    background: #e7d6c4;
+    border-radius: 25px;
+    text-decoration: none;
+    color: #2f2f2f;
+    font-weight: bold;
+}
+
+.view-appointments a:hover {
+    background: #d6c3ae;
+}
+.appointment-main {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.appointment-box {
+    background: #e6d6c3;
+    padding: 30px;
+    border-radius: 30px;
+    width: 420px;
+}
+
+.appointment-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.appointment-box label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+.appointment-box input,
+.appointment-box textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    margin-top: 6px;
+}
+
+.appointment-box button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    border-radius: 25px;
+    background: #d6c3ae;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.my-appointments-btn {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #2f2f2f;
+}
+.secondary-btn {
+    display: inline-block;
+    padding: 12px 26px;
+    background: #d8c8b5;
+    color: #2f2f2f;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.secondary-btn:hover {
+    background: #cbb7a1;
+}
+.page-title {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.appointments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+    padding: 0 60px 60px;
+}
+
+.appointment-card {
+    background: #e6d7c5;
+    padding: 25px;
+    border-radius: 22px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+.cancel-btn {
+    display: inline-block;
+    margin-top: 12px;
+    color: #8b2d2d;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.cancel-btn:hover {
+    text-decoration: underline;
+}
+
+.empty-text {
+    text-align: center;
+    font-size: 18px;
+    color: #555;
+}

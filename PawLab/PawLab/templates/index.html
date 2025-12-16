@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>PawLab Veteriner Kliniği</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <div class="logo">
+        🐾 PawLab Veteriner Kliniği
+    </div>
+
+    <nav class="menu">
+        <a href="/">Anasayfa</a>
+        <a href="/appointment">Randevu Al</a>
+        <a href="/login">Giriş Yap</a>
+        <a href="/admin">Yönetim</a>
+    </nav>
+
+    <div class="announcement">
+        <strong>☰ Duyuru Panosu</strong>
+        <p>Güncel duyurularımızı buradan takip edebilirsiniz</p>
+    </div>
+</header>
+
+<!-- MAIN -->
+<main class="main">
+
+    <!-- LEFT TEXT -->
+    <section class="about-box">
+        <p>
+            <strong>PawLab Veteriner Kliniği</strong> olarak, evcil dostlarınızın
+            yalnızca hastalıklarında değil, yaşamlarının her anında yanlarında olmayı amaçlıyoruz.
+            <br><br>
+            Onlar bizim için birer hayvan değil, ailenizin bir parçasıdır.
+            <br><br>
+            Sevgi, güven ve uzmanlıkla sunduğumuz veteriner hizmetleriyle,
+            minik dostlarınızın sağlığını emin ellere emanet edebilirsiniz.
+        </p>
+    </section>
+
+    <!-- CENTER IMAGES -->
+    <section class="image-gallery">
+        <img src="{{ url_for('static', filename='images/pet1.jpg') }}" alt="pet">
+        <img src="{{ url_for('static', filename='images/pet2.jpg') }}" alt="pet">
+        <img src="{{ url_for('static', filename='images/pet3.jpg') }}" alt="pet">
+    </section>
+
+    <!-- RIGHT QUOTE -->
+    <section class="quote">
+        “Minik dostlarınız<br>
+        için sevgiyle,<br>
+        güvenle.”
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+
+    <div class="footer-left">
+        <h4>İletişim Bilgilerimiz</h4>
+        <p>📧 pawlabklinik@gmail.com</p>
+        <p>📞 05xx xxx xx xx</p>
+        <p>📷 @pawlabklinik</p>
+    </div>
+
+    <div class="footer-right">
+        <h4>Adresimiz</h4>
+        <p>PawLab Veteriner Kliniği</p>
+        <p>Merkez Mah. Sağlık Sk. No:12</p>
+    </div>
+
+</footer>
+
+</body>
+</html>
+

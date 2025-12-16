@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Yönetici Girişi | PawLab</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<header class="header">
+    <div class="logo">🐾 PawLab Veteriner Kliniği</div>
+</header>
+
+<div class="auth-container">
+    <div class="auth-box">
+        <h2>Yönetici Girişi</h2>
+        <p class="auth-note">Yetkili personel girişi.</p>
+
+        <form method="POST">
+
+            <label>E-Posta Adresi</label>
+            <input type="email" name="email" required>
+
+            <label>Kullanıcı Adı</label>
+            <input type="text" name="username" required>
+
+            <label>Şifre</label>
+            <input type="password" name="password" required>
+
+            <p class="auth-warning">
+                Bu alan sadece yetkili personel içindir.
+            </p>
+
+            <button type="submit">Giriş Yap</button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
